@@ -13,7 +13,7 @@ The sample downloads the modem firmware signed by Nordic Semiconductor and updat
 Requirements
 ************
 
-The sample supports the following development kit, version 0.14.0 or higher:
+The sample supports the following development kit, version 1.0.1 or higher:
 
 .. table-from-sample-yaml::
 
@@ -27,7 +27,7 @@ Overview
 ********
 
 An |external_flash_size| of free space is required to perform a full modem update.
-Hence, only versions 0.14.0 and later of the nrf9160 DK support this sample as the earlier versions do not have any external flash memory.
+Hence, only versions 1.0.1 and later of the nrf9160 DK support this sample as the earlier versions do not have any external flash memory.
 
 The sample proceeds as follows:
 
