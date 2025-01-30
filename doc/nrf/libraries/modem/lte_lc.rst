@@ -8,6 +8,7 @@ LTE link control
    :depth: 2
 
 The LTE link control library provides functionality to control the LTE link on an nRF91 Series SiP.
+It can be used to establish the LTE connection and to monitor the connection status.
 
 The LTE link can be controlled through library configurations and API calls to enable a range of features such as specifying the Access Point Name (APN), switching between LTE network modes (NB-IoT or LTE-M), enabling GNSS support and power saving features such as Power Saving Mode (PSM) and enhanced Discontinuous Reception (eDRX).
 
@@ -83,6 +84,10 @@ The following block of code shows how you can use the API to establish an LTE co
    }
 
 The code block demonstrates how you can use the library to asynchronously set up an LTE connection.
+The :c:enumerator:`LTE_LC_EVT_NW_REG_STATUS` event indicates the network registration status, which can be used to determine if the device is connected to the LTE network.
+The :c:func:`lte_handler` function checks the network registration status.
+If the status is :c:enumerator:`LTE_LC_NW_REG_REGISTERED_HOME` or :c:enumerator:`LTE_LC_NW_REG_REGISTERED_ROAMING`, it means the device is connected to the LTE network.
+Otherwise, the device is not connected.
 
 Additionally, to enable specific functionalities and receive specific events from the library, you must enable the corresponding modules through their respective Kconfig options:
 
