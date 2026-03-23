@@ -135,8 +135,17 @@ Setup
 
 The HID service specification does not require encryption (:kconfig:option:`CONFIG_BT_HIDS_DEFAULT_PERM_RW_ENCRYPT`), but some systems disconnect from the HID devices that do not support security.
 
+Configuration options
+=====================
+
+The following sample-specific Kconfig options are used in this sample (defined in :file:`samples/bluetooth/peripheral_hids_keyboard/Kconfig`):
+
+.. options-from-kconfig::
+   :show-type
+
 Building and running
 ********************
+
 .. |sample path| replace:: :file:`samples/bluetooth/peripheral_hids_keyboard`
 
 .. include:: /includes/build_and_run_ns.txt
